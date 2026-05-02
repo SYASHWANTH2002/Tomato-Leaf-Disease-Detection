@@ -8,7 +8,7 @@ Data Handling (tomato_dataset.py): A custom pipeline handles automated class map
 Pre-processing (transforms.py): Images are resized to 224x224 and normalized using standard ImageNet statistics.  
 Augmentation: To improve generalization, training involves random horizontal flips, rotations, color jittering, and the addition of Gaussian noise.
 
-2. Model Architecture (architecture.png)
+2. Model Architecture 
 The "brain" of the project is a Hybrid Transformer-CNN model designed to overcome the limitations of using a single architecture.  
 Local Feature Extraction: ConvNeXt-Tiny is utilized to capture fine-grained textures and small lesion patterns on the leaves.  
 Global Context Extraction: EfficientNet-B3 runs in parallel to understand the broader structure and shape of the leaf.  
@@ -16,7 +16,7 @@ Feature Alignment: Since these backbones produce different data shapes, projecti
 Transformer Fusion: A Multi-Head Self-Attention module fuses these features, allowing the model to focus on the most critical parts of the image (the "attention" mechanism).  
 Final Classification: A fully connected head with 40% Dropout produces the final disease prediction.
 
-3. Training Strategy (train.png)
+3. Training Strategy 
 Training was conducted with a focus on stability and handling class imbalances.
 Optimizer: The system uses AdamW with a learning rate of 5e-5.
 Class Weights: The loss function is weighted based on the frequency of each class to ensure that rare diseases are not ignored by the model.
