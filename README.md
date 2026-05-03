@@ -1,4 +1,5 @@
 Tomato Leaf Disease Detection Using Deep  Learning
+
 This project provides an end-to-end deep learning solution for agricultural diagnostics, specifically focusing on the high-accuracy classification of 10 different tomato leaf diseases. By integrating modern computer vision architectures with reliability tools, it offers a "production-ready" framework that not only predicts diseases but also explains its reasoning and quantifies its own certainty.
 
 1. The Dataset & Preparation
